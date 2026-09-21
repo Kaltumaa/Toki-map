@@ -1,0 +1,10 @@
+{
+  "name": "tokimap",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "npm --prefix server run dev & npm --prefix client run dev",
+    "test": "npm --prefix server test",
+    "typecheck": "npm --prefix server run typecheck && npm --prefix client exec tsc -- --noEmit"
+  }
+}

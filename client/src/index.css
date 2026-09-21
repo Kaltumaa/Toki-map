@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep: #083d38;
+  --color-deep-soft: #0d524b;
+  --color-paper: #faf6ef;
+  --color-paper-dim: #efe8dc;
+  --color-ink: #1c2321;
+
+  --color-restaurant: #e0387a;
+  --color-cafe: #f0b429;
+  --color-activity: #17a398;
+  --color-shopping: #4b3f9e;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cafe);
+  outline-offset: 2px;
+}
+
+.leaflet-container {
+  font-family: var(--font-sans);
+  background: var(--color-paper-dim);
+}
+.leaflet-control-attribution {
+  font-size: 10px;
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 2px;
+}
+
+.pin {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px 999px 999px 4px;
+  transform: rotate(-45deg);
+  border: 2px solid var(--color-paper);
+  box-shadow: 0 2px 6px rgb(8 61 56 / 0.35);
+  transition: opacity 150ms ease;
+}
+.pin span {
+  transform: rotate(45deg);
+  font-size: 14px;
+  line-height: 1;
+}
+.pin-ordered span {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-paper);
+}
+.pin-dim {
+  opacity: 0.3;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
